@@ -140,14 +140,14 @@ body {
 }
 
 .img {
-    width: 30%;
+    width: 30vw;
     padding: 1vw;
     align-items: center;
     justify-content: center;
 }
 
 .img img {
-    height: 80%;
+    width: 30vw;
     border-radius: 2vw;
     margin: 0 0 2vw 0;
     box-shadow: 0px 4px 20px white;
@@ -529,4 +529,29 @@ input:-webkit-autofill{
     font-size: 1.3vw;
     letter-spacing: 0.1vw;
     text-align: center;
+}
+
+@media (max-height:430px){
+    .project-names {
+        margin: 1vw 2vw;
+        padding: 1vw 3vw;
+        height: 3vw;
+        font-size: 1.3vw;
+    }
+
+    .footer-contact {
+        margin-top: 1vw;
+    }
+
+    .intro-container,
+    .skills-container {
+        margin: 0.2vw 0;
+        padding: 1vw 3vw;
+        font-size: 1vw;
+    }
+
+    .img img{
+        height: 75vh;
+        width: auto;
+    }
 }
