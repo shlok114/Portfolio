@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-html,body{
+html,
+body {
     margin: 0;
     padding: 0;
     color: white;
@@ -13,7 +14,7 @@ html,body{
 }
 
 /* The overlay */
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -25,15 +26,16 @@ html,body{
     animation-delay: 1s;
     transform: translateY(0);
 }
+
 @keyframes slideUp {
-    to{
+    to {
         transform: translateY(-100%);
     }
 }
 
 
 /* The nav bar */
-.nav{
+.nav {
     padding: 1vw 5vw;
     height: 3vw;
     align-items: center;
@@ -44,35 +46,40 @@ html,body{
     animation: floatInNav 1s ease forwards;
     animation-delay: 2s;
 }
+
 @keyframes floatInNav {
     to {
-      opacity: 1;
-      transform: translateY(0);
-      box-shadow: 0 1px 2px #ffffff94;
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 1px 2px #ffffff94;
     }
 }
-.left{
+
+.left {
     font-size: 2vw;
     font-weight: 700;
     align-items: center;
     transition: all 1s ease;
 }
-.left:hover{
+
+.left:hover {
     transform: rotate(360deg);
 }
 
-.right{
+.right {
     align-items: center;
     display: flex;
     gap: 2vw;
     font-size: 1.3vw;
 }
-.right a{
+
+.right a {
     color: white;
     text-decoration: none;
     position: relative;
 }
-.right a::after{
+
+.right a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -82,18 +89,24 @@ html,body{
     background-color: #fff;
     transition: width 0.4s ease;
 }
-.right a:hover::after{
+
+.right a:hover::after {
     width: 100%;
 }
 
-.hero{
+.right i {
+    display: none;
+}
+
+.hero {
     height: calc(100vh - 5vw);
     display: flex;
     margin: 0;
     justify-content: center;
     align-items: center;
 }
-.glitchy{
+
+.glitchy {
     font-size: 15vw;
     color: white;
     text-align: center;
@@ -103,20 +116,21 @@ html,body{
     animation: heroFade 3.5s ease forwards;
     animation-delay: 2.3s;
 }
+
 @keyframes heroFade {
-    to{
+    to {
         opacity: 1;
     }
 }
-  
+
 .glitchy:hover {
     letter-spacing: 1vw;
-    text-shadow: 
-      0.5vw 0 #da02da,
-      -0.5vw 0 #02d6d6;
+    text-shadow:
+        0.5vw 0 #da02da,
+        -0.5vw 0 #02d6d6;
 }
 
-#about{
+#about {
     margin: 0;
     display: flex;
     height: 100vh;
@@ -125,74 +139,94 @@ html,body{
     overflow-y: hidden;
 }
 
-.img{
-    width:30%;
+.img {
+    width: 30%;
     padding: 1vw;
     align-items: center;
     justify-content: center;
 }
-.img img{
+
+.img img {
     height: 80%;
     border-radius: 2vw;
     margin: 0 0 2vw 0;
     box-shadow: 0px 4px 20px white;
     transition: all 0.3s ease;
 }
-.img img:hover{
+
+.img img:hover {
     transform: scale(1.05);
 }
-.img h1{
+
+.img h1 {
     font-size: 2vw;
     text-align: center;
 }
 
-.heading{
-    height: 3vw;    
+
+
+.intro .heading h1,
+.skills .heading h1 {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
 }
 
-.intro, .skills {
-    height: 100%; /* Let content define height */
+.intro,
+.skills {
+    height: 100%;
+    /* Let content define height */
 }
-.intro{
+
+.intro {
     width: 40%;
 }
-.skills{
+
+.skills {
     width: 40%;
 }
-  
-.intro-info{
+
+.intro-info {
     display: flex;
-    font-size: 1.2vw;
     height: 100%;
     width: 100%;
     justify-content: center;
 }
-.skills-info{
+
+.skills-info {
     display: flex;
-    font-size: 1.2vw;
     height: 100%;
     width: 100%;
     justify-content: center;
 }
 
-.intro-container, .skills-container {
+.intro-container,
+.skills-container {
     height: 70%;
     width: 100%;
     margin: 1vw 0;
     padding: 2vw 3vw;
+    font-size: 1.2vw;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1vw;
     box-shadow: 0 4px 20px rgba(180, 178, 178, 0.918);
     transition: all 0.3s ease;
 }
-.intro-container:hover{
-    transform: scale(1.05);
-}
-.skills-container:hover{
+
+.intro-container:hover {
     transform: scale(1.05);
 }
 
-.skill1, .skill2, .skill3, .skill4, .skill5, .skill6, .skill7 {
+.skills-container:hover {
+    transform: scale(1.05);
+}
+
+.skill1,
+.skill2,
+.skill3,
+.skill4,
+.skill5,
+.skill6,
+.skill7 {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -206,26 +240,51 @@ html,body{
     cursor: pointer;
     z-index: 1;
 }
-  
-.skill1 .percent, .skill2 .percent, .skill3 .percent, .skill4 .percent, .skill5 .percent, .skill6 .percent, .skill7 .percent {
+
+.skill1 .percent,
+.skill2 .percent,
+.skill3 .percent,
+.skill4 .percent,
+.skill5 .percent,
+.skill6 .percent,
+.skill7 .percent {
     opacity: 0;
     transition: all 0.4s ease;
-    z-index: 2; /* higher than bar */
+    z-index: 2;
+    /* higher than bar */
     color: white;
 }
-  
-.skill1:hover, .skill2:hover, .skill3:hover, .skill4:hover, .skill5:hover, .skill6:hover, .skill7:hover {
+
+.skill1:hover,
+.skill2:hover,
+.skill3:hover,
+.skill4:hover,
+.skill5:hover,
+.skill6:hover,
+.skill7:hover {
     color: black;
 }
-  
-.skill1:hover .percent, .skill2:hover .percent, .skill3:hover .percent, .skill4:hover .percent, .skill5:hover .percent, .skill6:hover .percent, .skill7:hover .percent {
+
+.skill1:hover .percent,
+.skill2:hover .percent,
+.skill3:hover .percent,
+.skill4:hover .percent,
+.skill5:hover .percent,
+.skill6:hover .percent,
+.skill7:hover .percent {
     opacity: 1;
     color: black;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 15px white;
 }
-  
-  /* Progress bar background */
-.skill1::before, .skill2::before, .skill3::before, .skill4::before, .skill5::before, .skill6::before, .skill7::before {
+
+/* Progress bar background */
+.skill1::before,
+.skill2::before,
+.skill3::before,
+.skill4::before,
+.skill5::before,
+.skill6::before,
+.skill7::before {
     content: "";
     position: absolute;
     left: 0;
@@ -238,41 +297,65 @@ html,body{
     border-radius: 0.5vw;
 }
 
-.skill1 p, .skill2 p, .skill3 p, .skill4 p, .skill5 p, .skill6 p, .skill7 p {
+.skill1 p,
+.skill2 p,
+.skill3 p,
+.skill4 p,
+.skill5 p,
+.skill6 p,
+.skill7 p {
     position: relative;
     z-index: 2;
 }
-  
-.skill1:hover::before {width: 70%;}
-.skill2:hover::before {width: 75%;}
-.skill3:hover::before {width: 80%;}
-.skill4:hover::before {width: 90%;}
-.skill5:hover::before {width: 90%;}
-.skill6:hover::before {width: 70%;}
-.skill7:hover::before {width: 60%;}
 
-#projects{
+.skill1:hover::before {
+    width: 70%;
+}
+
+.skill2:hover::before {
+    width: 75%;
+}
+
+.skill3:hover::before {
+    width: 80%;
+}
+
+.skill4:hover::before {
+    width: 90%;
+}
+
+.skill5:hover::before {
+    width: 90%;
+}
+
+.skill6:hover::before {
+    width: 70%;
+}
+
+.skill7:hover::before {
+    width: 60%;
+}
+
+#projects {
     height: 100vh;
     padding: 1vw 3vw;
 }
 
-#projects h1{
+#projects h1 {
+    font-size: 2.5vw;
     margin-bottom: 2vw;
 }
 
-#projects h2{
-    font-size: 1.5vw;
-}
-
-#projects a{
+#projects a {
     text-decoration: none;
     color: #fff;
 }
 
-.project-names{
+.project-names {
     margin: 1.5vw 2vw;
     padding: 1vw 3vw;
     height: 3vw;
+    font-size: 1.3vw;
     font-family: 'Nova Square';
     display: flex;
     align-items: center;
@@ -281,73 +364,84 @@ html,body{
     transition: all 0.3s ease;
 }
 
-.project-names:hover{
+.project-names:hover {
     transform: translateY(-10px);
     box-shadow: 1px 0px 10px #ffffffd8;
     color: #000;
     background-color: #fff;
 }
 
-#contact{
-    height: 90vh;
+#contact {
+    height: 89vh;
     padding: 1vw 3vw 0 3vw;
 }
 
 
-.contact-h1{
+.contact-h1 {
     text-align: center;
     width: 100%;
+    font-size: 2.5vw;
     padding: 0 0 1vw 0;
 }
 
-#contact hr{
+#contact hr {
     text-shadow: 0 1px 10px #fff;
 }
-.contact-h2{
+
+.contact-h2 {
     text-align: center;
     font-size: 2vw;
     font-family: 'Bodoni Moda';
     margin: 1vw;
 }
 
-.container-holder{
+.container-holder {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2vw;
 }
-.contact-container{
+
+.contact-container {
     height: 55vh;
     width: 50vw;
     border: 1px solid #fff;
     border-radius: 1vw;
     display: flex;
 }
-.contact-details{
+
+.contact-details {
     width: 55%;
     padding: 1.5vw 3vw;
     text-align: left;
 }
-.contact-details h2{
+
+.contact-details h2 {
     font-family: 'Nova Square';
-    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
 }
-.contact-details a{
+
+.contact-details a {
     color: #fff;
     text-decoration: none;
 }
-.contact-details .title{
+
+.contact-details .title {
     margin-top: 1vw;
     font-family: Bodoni Moda;
     font-size: 1.5vw;
 }
-.contact-details p{
+
+.contact-details p {
     font-size: 1.2vw;
 }
-.contact-details i{
+
+.contact-details i {
     font-size: 2vw;
 }
-.contact-form{
+
+.contact-form {
     font-family: 'Nova Square';
     background-color: white;
     border-top-right-radius: 1vw;
@@ -358,7 +452,8 @@ html,body{
     font-size: 1.5vw;
     color: #000;
 }
-.input-container{
+
+.input-container {
     display: flex;
     width: 91%;
     height: 1vw;
@@ -370,17 +465,23 @@ html,body{
     margin-top: 0.3vw;
     margin-bottom: 1vw;
 }
-.contact-form input{
+
+input:-webkit-autofill{
+    box-shadow: 0 0 0px 1000px #dddadc inset;
+}
+
+.contact-form input {
+    background-color: #dddadc;
     border-radius: 1vw;
     height: 2vw;
     font-size: 1.2vw;
     margin-bottom: 1vw;
     border: none;
-    background-color: transparent;
-    outline: none; /*This gives no outline to the input tag*/
+    outline: none;
     width: 100%;
 }
-.textarea-container{
+
+.textarea-container {
     display: flex;
     width: 91%;
     height: 2vw;
@@ -392,12 +493,14 @@ html,body{
     margin-top: 0.3vw;
     margin-bottom: 1vw;
 }
-.contact-form textarea{
+
+.contact-form textarea {
     border: none;
     outline: none;
     background: transparent;
 }
-.contact-form button{
+
+.contact-form button {
     background-color: black;
     box-shadow: 0px 0px 10px #00000094;
     border: none;
@@ -408,17 +511,22 @@ html,body{
     font-size: 1.2vw;
     font-family: 'Bodoni Moda';
 }
-.not-last{
+
+.footer-contact {
     margin-top: 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.not-last img{
+
+.footer-contact img {
     height: 3vw;
 }
-.footer{
+
+.footer {
     background-color: #2b2b2b;
     padding: 1vw 3vw;
+    font-size: 1.3vw;
+    letter-spacing: 0.1vw;
     text-align: center;
 }
