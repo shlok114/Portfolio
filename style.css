@@ -574,15 +574,15 @@ input:-webkit-autofill {
     }
 
     .glitchy {
-        font-size: 12vh;
+        font-size: 10vh;
         width: 90vw;
     }
 
     .glitchy:hover {
-        letter-spacing: 1vh;
+        letter-spacing: 0.4vh;
         text-shadow:
-            0.5vh 0 #da02da,
-            -0.5vh 0 #02d6d6;
+            0.2.5vh 0 #da02da,
+            -0.2.5vh 0 #02d6d6;
     }
 
     #about {
