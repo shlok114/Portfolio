@@ -575,6 +575,7 @@ input:-webkit-autofill {
 
     .glitchy {
         font-size: 15vh;
+        width: 90vw;
     }
 
     .glitchy:hover {
