@@ -94,10 +94,6 @@ body {
     width: 100%;
 }
 
-.right i {
-    display: none;
-}
-
 .hero {
     height: calc(100vh - 5vw);
     display: flex;
@@ -133,10 +129,9 @@ body {
 #about {
     margin: 0;
     display: flex;
-    height: 100vh;
     gap: 3vw;
     padding: 1vw 5vw;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .img {
@@ -163,7 +158,9 @@ body {
     text-align: center;
 }
 
-
+#about hr {
+    display: none;
+}
 
 .intro .heading h1,
 .skills .heading h1 {
@@ -466,7 +463,7 @@ body {
     margin-bottom: 1vw;
 }
 
-input:-webkit-autofill{
+input:-webkit-autofill {
     box-shadow: 0 0 0px 1000px #dddadc inset;
 }
 
@@ -531,7 +528,7 @@ input:-webkit-autofill{
     text-align: center;
 }
 
-@media (max-height:430px){
+@media (max-height:430px) {
     .project-names {
         margin: 1vw 2vw;
         padding: 1vw 3vw;
@@ -550,8 +547,250 @@ input:-webkit-autofill{
         font-size: 1vw;
     }
 
-    .img img{
+    .img img {
         height: 75vh;
         width: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .nav {
+        padding: 1vh 3vh;
+        height: 5vh;
+    }
+
+    .left {
+        font-size: 2.5vh;
+        text-align: left;
+    }
+
+    .right {
+        font-size: 1.7vh;
+        text-align: right;
+    }
+
+    .hero {
+        height: calc(100vh - 7vh);
+    }
+
+    .glitchy {
+        font-size: 15vh;
+    }
+
+    .glitchy:hover {
+        letter-spacing: 1vh;
+        text-shadow:
+            0.5vh 0 #da02da,
+            -0.5vh 0 #02d6d6;
+    }
+
+    #about {
+        display: flex;
+        flex-direction: column;
+        padding: 1vw 3vh;
+    }
+
+    .img {
+        width: 100vw;
+        align-items: center;
+    }
+
+    .img img {
+        width: 90vw;
+        border-radius: 4vw;
+        box-shadow: 0px 3px 10px white;
+    }
+
+    .img h1 {
+        font-size: 3vh;
+        text-align: center;
+        margin-right: 5vh;
+    }
+
+    #about hr {
+        display: block;
+    }
+
+    .intro .heading h1,
+    .skills .heading h1 {
+        font-size: 3vh;
+        margin-bottom: 1vw;
+    }
+
+    .intro,
+    .skills {
+        width: 100%;
+    }
+
+    .intro-info {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skills-info {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .intro-container,
+    .skills-container {
+        width: 100%;
+        margin: 1vh 0;
+        padding: 2vh 5vh;
+        font-size: 2vh;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2vh;
+    }
+
+    .skills-container {
+        padding: 2vh 5vh;
+    }
+
+    .skill1,
+    .skill2,
+    .skill3,
+    .skill4,
+    .skill5,
+    .skill6,
+    .skill7 {
+        border-radius: 1.2vh;
+        margin-bottom: 1.2vh;
+        padding: 1vh;
+    }
+
+    #projects {
+        height: auto;
+        padding: 2vh 3vh;
+    }
+    
+    #projects h1 {
+        font-size: 3vh;
+        margin-bottom: 4vh;
+    }
+    
+    .project-names {
+        margin: 3vh 2vh;
+        padding: 1vh 3vh;
+        height: 8vh;
+        font-size: 1.7vh;
+        border-radius: 2vh;
+    }
+
+    #contact {
+        height: 90vh;
+        padding: 1vw 3vw 0 3vw;
+    }
+    
+    
+    .contact-h1 { 
+        font-size: 2.5vh;
+        padding: 0 0 1vh 0;
+    }
+    
+    .contact-h2 {
+        font-size: 2vh;
+        font-family: 'Bodoni Moda';
+        margin: 2vh;
+    }
+    
+    .container-holder {
+        display: flex;
+        flex-direction: column;
+        margin: 2vh;
+    }
+    
+    .contact-container {
+        height: 70vh;
+        width: 70vw;
+        border-radius: 1vh;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .contact-details {
+        width: 64vw;
+        height: 27vh;
+        padding: 1.5vh 3vh;
+    }
+    
+    .contact-details h2 {
+        font-size: 2vh;
+        margin-bottom: 1.7vh;
+    }
+
+    .contact-details .title {
+        margin-top: 1vh;
+        font-size: 1.7vh;
+    }
+    
+    .contact-details p {
+        font-size: 1.5vh;
+    }
+    
+    .contact-details br{
+        display: none;
+    }
+
+    .contact-details i {
+        font-size: 3vh;
+    }
+    
+    .contact-form {
+        border-top-right-radius: none;
+        border-bottom-right-radius: 1vh;
+        border-bottom-left-radius: 1vh;
+        width: 64vw;
+        font-size: 1.5vh;
+        height: 29vh;
+    }
+    
+    .input-container {
+        width: 91%;
+        height: 1vh;
+        padding: 1vh;
+        border-radius: 1vh;
+        margin-top: 1vh;
+        margin-bottom: 1.5vh;
+    }
+    
+    .contact-form input {
+        border-radius: 1vh;
+        height: 2vh;
+        font-size: 1.2vh;
+        margin-bottom: 1vh;
+    }
+    
+    .textarea-container {
+        height: 2vh;
+        padding: 1vh;
+        border-radius: 1vh;
+        margin-top: 0.3vh;
+        margin-bottom: 3vh;
+    }
+    
+    .contact-form button {
+        width: 10vh;
+        height: 4vh;
+        border-radius: 0.5vh;
+        font-size: 1.2vh;
+    }
+    
+    .footer-contact {
+        margin-top: 1.8vh;
+    }
+    
+    .footer-contact img {
+        height: 3vh;
+    }
+    
+    .footer {
+        height: 4vh;
+        align-items: center;
+        padding: 2vh 3vh;
+        font-size: 1.3vh;
+        letter-spacing: 0.1vh;
     }
 }
