@@ -551,6 +551,7 @@ input:-webkit-autofill {
     background-color: black;
     box-shadow: 0px 0px 10px #00000094;
     border: none;
+    cursor: pointer;
     width: 10vw;
     height: 3vw;
     border-radius: 0.5vw;
