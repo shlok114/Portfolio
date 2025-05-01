@@ -221,7 +221,6 @@ body {
 .intro,
 .skills {
     height: 100%;
-    /* Let content define height */
 }
 
 .intro {
@@ -324,7 +323,6 @@ body {
     text-shadow: 0 0 15px white;
 }
 
-/* Progress bar background */
 .skill1::before,
 .skill2::before,
 .skill3::before,
@@ -341,7 +339,7 @@ body {
     background-color: white;
     z-index: 0;
     transition: width 0.5s ease;
-    border-radius: 0.5vw;
+    border-radius: 1vw;
 }
 
 .skill1 p,
@@ -731,6 +729,16 @@ input:-webkit-autofill {
         border-radius: 1.2vh;
         margin-bottom: 1.2vh;
         padding: 1vh;
+    }
+
+    .skill1::before,
+    .skill2::before,
+    .skill3::before,
+    .skill4::before,
+    .skill5::before,
+    .skill6::before,
+    .skill7::before {
+        border-radius:1.2vh;
     }
 
     #projects {
